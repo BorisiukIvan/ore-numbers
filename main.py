@@ -1,3 +1,4 @@
+# You should create a special file named "ore" and write there some ore numbers (ex. 6, 28, 496, 6200 and 8128)
 def stF(x, i):
     res = 0
     while i >= 0:
@@ -43,6 +44,9 @@ b = 6
 k = 1
 c = 0
 
+# You can set your value, if you want.
+p = 10000
+
 arr = open("ore").read().split("\n")
 arr2 = []
 for i in arr:
@@ -56,8 +60,8 @@ for s in arr:
     if (n == b): k = 1
     if (not k): continue
     c = c + 1
-#    if (c % 100 == 0): open("ore_log", "w").write(str(n) + " " + str(c))
-    for i in range(2, 10000):
+    if (c % 100 == 0): open("ore_log", "w").write(str(n) + " " + str(c))
+    for i in range(2, p):
         if (not n*i): continue
         y = multiply_num(n*i, f, i)
         t = int(y.split(" ")[0])
