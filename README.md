@@ -1,2 +1,2 @@
 # ore-numbers
- List of all Ore numbers
+ List of 300000 Ore numbers.
